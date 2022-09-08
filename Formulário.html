@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>FORMÚLARIO</title>
+
+        <style>
+
+            h1{
+                text-align:center;
+            }
+            
+            footer{
+                    bottom: 0;
+                    left: 0;
+                    height: 40px;
+                    position: fixed;
+                    width: 100%;
+            }
+            
+            body{
+                background-color: rgb(243, 243, 243);
+
+            }
+       
+       </style>
+    
+    </head>
+
+    <body>
+
+        </nav>
+
+        <div class="container">
+
+            <div>
+                <h1>CADASTRAMENTO</h1>
+            </div>
+
+            <div>
+                <p></p>
+        
+                <p></p>
+            </div>
+        
+
+            <div>
+                <form id="form">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control" id="email" placeholder="Digite seu Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="numero">Telefone</label>
+                      <input type="text" class="form-control" id="numero" placeholder="Digite seu número de contato">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="datan">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="datan">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="datar">Data de Registro</label>
+                        <input type="date" id="datar" class="form-control">
+                          
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" id="endereco">
+                      </div>
+                    </div>
+                    <button type="submit" id="salvar" class="btn btn-primary">Entrar</button>
+                    <button type="submit" id="consultar" class="btn btn-primary">Consultar</button>
+                </form>
+        </div>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script>
+
+
+$(document).ready(function (){
+ 
+ 
+ var salvar = document.getElementById("salvar");
+ var form = document.getElementById("form");
+
+
+ salvar.addEventListener("click", function (e) {
+     e.preventDefault();
+
+     var nome = document.getElementById("nome").value;
+     var sobrenome = document.getElementById("sobrenome").value;
+     var email = document.getElementById("email").value;
+     var numero = document.getElementById("numero").value;
+     var endereco = document.getElementById("endereco").value;
+     var datan = document.getElementById("datan").value;
+     var datar = document.getElementById("datar").value;
+
+
+
+     var obj = {
+
+         nome: nome,
+         sobrenome:sobrenome,
+         email: email,
+         numero: numero,
+         endereco: endereco,
+         datan: datan,
+         datar: datar,
+
+     }
+
+     localStorage.setItem("salvar", JSON.stringify(obj));
+     form.reset();
+
+ });
+
+
+});
+
+$(document).ready(function(){
+       
+ 
+       var salvar = document.getElementById("salvar");
+       var consultar = document.getElementById("consultar");
+       var form = document.getElementById("form");
+
+       consultar.addEventListener("click", function(e){
+           e.preventDefault()
+
+           var dados_str = localStorage.getItem("salvar");
+           var dados_obj = JSON.parse(dados_str);
+
+           document.getElementById("nome").value = dados_obj.nome;
+           document.getElementById("sobrenome").value = dados_obj.sobrenome;
+           document.getElementById("email").value = dados_obj.email;
+           document.getElementById("numero").value = dados_obj.numero;
+           document.getElementById("endereco").value = dados_obj.endereco;
+           document.getElementById("datan").value = dados_obj.datan;  
+           document.getElementById("datar").value = dados_obj.datar; 
+
+      });
+
+      })
+
+
+   </script>
+
+
+<img src="../Trabalho de WEB II/imagens/obrigado.png" style="margin-left: 6cm;" >
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+
+
+</html>

@@ -1,0 +1,108 @@
+*{
+  margin: 0%;
+  
+  padding: 0%;
+  
+  
+  }
+  
+  
+  .logo{
+  
+     color: rgb(255, 255, 255); 
+  font-size: xx-large;
+  
+  
+  }
+  
+  
+  
+  nav{
+    display: flex;
+    align-items: auto;
+    font-family:sans-serif;
+    background: rgb(90, 75, 173);
+    justify-content: space-around;
+    color: aliceblue;
+   padding-bottom: 1px;
+   margin-left: 0px;
+    }
+  
+  .complentos list{
+      
+      margin-left: 220px;
+     align-items: center;
+      
+      }
+      .complentos{
+  
+      display: flex;
+      margin: 40px;
+          
+          }
+.carousel-item {
+
+margin: flex;
+display: auto;
+    align-items: center;
+    font-family:sans-serif;
+    background: rgb(255, 255, 255);
+    justify-content: center;
+    color: rgb(80, 77, 77);
+    justify-content: space-around;
+     opacity: 2.0 ;
+  box-shadow: 5px 5px 5px black;
+
+
+}
+
+.foto{
+
+  align-items: center;
+  background:white;
+  margin-left: 520px;
+  justify-content: space-around;
+
+  
+}
+.Titulo{
+align-items: 510px;
+font-size: xx-large;
+justify-content: space-around;
+text-align:center;
+
+
+}
+
+.sub-titulo{
+
+  text-align:center;   
+  align-items: center;
+  height: 100px;
+  justify-content: space-around;
+ 
+}
+  .carousel slide{
+    justify-content: space-around;
+    align-items: right;
+    display: flex;
+  
+  }
+
+  .card1{
+
+
+   margin-inline: 5cm;
+   margin-top: 0cm;
+   
+    }
+  
+ .card2{
+
+ padding: 0cm ;
+margin-inline: 24cm;
+margin-top: -13cm;
+
+
+ }
+
