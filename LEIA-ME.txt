@@ -1,9 +1,0 @@
-Trabalho realizado por: Caio Sousa, Cleyton e Gabriel Junio.
-
-Adendo:
-Algumas funcionalidas presentes na página (Clínica Geral) não possuem nenhuma finalidade, apenas para meios criativos.
-
-Funções funcionais.
-
-Formúlario-Visitar
-Passar de imagens.
